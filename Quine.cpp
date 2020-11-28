@@ -10,7 +10,7 @@ int main(){
 		"int main(){",
 		"string arr[] = {",
 		"};",
-		"fstream f(arr[0]);",
+		"fstream f(arr[0], fstream::out);",
 		"for(int i=1;i<5;i++) f<<arr[i]<<endl;",
 		"f<<(char)9<<arr[5]<<endl;",
 		"for(int i=0;i<17;i++) f<<(char)9<<(char)9<<(char)34<<arr[i]<<(char)34<<(char)44<<endl;",
@@ -21,7 +21,7 @@ int main(){
 		"return 0;",
 		"}",
 	};
-	fstream f(arr[0]);
+	fstream f(arr[0], fstream::out);
 	for(int i=1;i<5;i++) f<<arr[i]<<endl;
 	f<<(char)9<<arr[5]<<endl;
 	for(int i=0;i<17;i++) f<<(char)9<<(char)9<<(char)34<<arr[i]<<(char)34<<(char)44<<endl;
